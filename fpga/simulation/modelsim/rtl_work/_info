@@ -1,0 +1,116 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\roger\Desktop\projects\ultrasonic\fpga\simulation\modelsim
+vclock_divider
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IRC]j=3?TiTchilR=^CAD03
+V??nL0[eDGM:jYN6S3gcR21
+S1
+Z2 dC:\Users\roger\Desktop\projects\ultrasonic\fpga\simulation\modelsim
+w1655265000
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga/clock_divider.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga/clock_divider.v
+L0 2
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work work -O0
+Z5 !s92 -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga -O0
+!i10b 1
+!s100 i8cUYz1o<haM>_7GZe5Zf0
+!s105 clock_divider_v_unit
+!s85 0
+!s108 1658602997.840000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga/clock_divider.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga|C:/Users/roger/Desktop/projects/ultrasonic/fpga/clock_divider.v|
+!s101 -O0
+vphase_generator
+R1
+Infmc_VVFgWfkRkAdWEW:?0
+V3iI`=cVPjTLaePgUj@c_60
+S1
+R2
+w1658605015
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 >zS50Ma^nN3O6UJG?HR6:2
+!s105 phase_generator_v_unit
+!s85 0
+!s108 1658605054.088000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga|-O0|C:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v|
+!s101 -O0
+vspi_slave
+R1
+I:94;ARj_3LbWCk1;;honc0
+VhP6RP[RH2=onI?K1PM3]T0
+S1
+R2
+w1656802529
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga/spi_slave.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga/spi_slave.v
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 AE2FhF=BRK[agJ73517530
+!s105 spi_slave_v_unit
+!s85 0
+!s108 1658602997.892000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga/spi_slave.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga|C:/Users/roger/Desktop/projects/ultrasonic/fpga/spi_slave.v|
+!s101 -O0
+vultrasonic
+R1
+I27Y;ehMkY1Z2`:Pz:<7>70
+VJ:`JKhTjnm10[U3A?g1^=3
+S1
+R2
+w1658610352
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 :[5RcWP<4YhG]M6K7h6``3
+!s105 ultrasonic_v_unit
+!s85 0
+!s108 1658610545.342000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga|-O0|C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v|
+!s101 -O0
+vultrasonic_test
+!i10b 1
+!s100 iNVnMD0M@b:2jncV;XEKW3
+IG10dIz^ak<cJWb5P>8N^m3
+V0fVBfNBY9Kn2oj_YHm:TA0
+R2
+w1658610477
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1658610547.280000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v|
+!s90 -reportprogress|300|-work|work|-O0|C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v|
+!s101 -O0
+o-work work -O0

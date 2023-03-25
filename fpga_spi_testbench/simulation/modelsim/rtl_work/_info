@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\roger\Desktop\projects\ultrasonic\fpga_spi_test\simulation\modelsim
+vspi_test
+IHTSKdKhi_>[Va1YQQJXTH0
+V6V_JfMaeCIaHHeKO_gZ[F3
+Z1 dC:\Users\roger\Desktop\projects\ultrasonic\fpga_spi_test\simulation\modelsim
+w1656795474
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+o-vlog01compat -work work -O0
+!i10b 1
+!s100 >NTQmM<h_8l]M91Ie4aHg1
+!s85 0
+!s108 1656795515.000000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test|-O0|C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test -O0
+vspi_test_TB
+!i10b 1
+!s100 AX@A5F1Mh7j=mNQ<YcgGJ2
+I]1cgK8U_;=Q5NedAiTfnj1
+VDhXleljCGU^L;glKVY=[92
+R1
+w1656304687
+8C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test_tb.v
+FC:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1656795517.301000
+!s107 C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test_tb.v|
+!s90 -reportprogress|300|-work|work|-O0|C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test_tb.v|
+!s101 -O0
+o-work work -O0
+nspi_test_@t@b

@@ -1,0 +1,22 @@
+// SPLITS 50 MHz CLOCK INTO 10 MHz
+module clock_divider(clock_in);
+	input clock_in;
+	reg clock_slow;
+	
+	// master clock = 50 MHz / 10 = 5 MHz
+	// 128 bins per period, so 5 MHz / 128 = 39.0625 kHz
+	
+	reg[3:0] counter = 4'd0;
+	
+	parameter DIVISOR = 4'd4;
+	
+	// 50 MHz
+	always @(posedge clock_in) begin
+		counter <= counter + 24'd1;
+		
+		if (counter >= (DIVISOR-1)) begin
+			counter <= 24'd0;
+			clock_slow <= ~clock_slow;
+		end
+	end
+endmodule

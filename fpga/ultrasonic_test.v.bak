@@ -1,0 +1,17 @@
+module ultrasonic_test(
+  output reg clk_tb,
+  output reg SERIAL_IN,
+  
+  output wire[7:0] out_data,
+  input wire DATA_DONE
+  );
+  
+  
+  // 50 MHz clock
+  initial begin
+    clk_tb <= 0;
+    forever begin
+      #10 clk_tb = ~clk_tb;
+    end
+  end
+endmodule;

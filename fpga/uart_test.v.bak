@@ -1,0 +1,11 @@
+`timescale 1ns/100ps
+
+module uart_test(
+  output reg clk_tb,
+  output reg SERIAL_IN,
+  
+  output wire out_data
+  );
+	// BAUD RATE = 390625
+	// 2.56 us = 2560 ns between each edge
+endmodule

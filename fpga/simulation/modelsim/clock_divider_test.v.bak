@@ -1,0 +1,10 @@
+`timescale 1ns/1ns
+
+module clock_tb();
+  initial begin:
+    clk_tb = 0;
+    forever begin
+      #10 clk_tb = ~clk_tb;
+    end
+  end
+endmodule // clock_tb

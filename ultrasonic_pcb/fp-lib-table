@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "ultrasonic")(type "KiCad")(uri "${KIPRJMOD}/ultrasonic.pretty")(options "")(descr ""))
+  (lib (name "TC4427EOA")(type "KiCad")(uri "C:/Users/roger/Downloads/TC4427EOA")(options "")(descr ""))
+)

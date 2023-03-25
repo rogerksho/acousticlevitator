@@ -1,0 +1,210 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+CHIP  "ultrasonic"  ASSIGNED TO AN: EP2C5T144C8
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT_WITH_BUS_HOLD : 3         :        :                   :         : 1         :                
+transducer_out[0]            : 4         : output : 3.3-V LVTTL       :         : 1         : Y              
+VCCIO1                       : 5         : power  :                   : 3.3V    : 1         :                
+GND                          : 6         : gnd    :                   :         :           :                
+transducer_out[1]            : 7         : output : 3.3-V LVTTL       :         : 1         : Y              
+transducer_out[2]            : 8         : output : 3.3-V LVTTL       :         : 1         : Y              
+transducer_out[3]            : 9         : output : 3.3-V LVTTL       :         : 1         : Y              
+TDO                          : 10        : output :                   :         : 1         :                
+TMS                          : 11        : input  :                   :         : 1         :                
+TCK                          : 12        : input  :                   :         : 1         :                
+TDI                          : 13        : input  :                   :         : 1         :                
+DATA0                        : 14        : input  :                   :         : 1         :                
+DCLK                         : 15        :        :                   :         : 1         :                
+nCE                          : 16        :        :                   :         : 1         :                
+master_clock                 : 17        : input  : 3.3-V LVTTL       :         : 1         : Y              
+GND+                         : 18        :        :                   :         : 1         :                
+GND                          : 19        : gnd    :                   :         :           :                
+nCONFIG                      : 20        :        :                   :         : 1         :                
+GND+                         : 21        :        :                   :         : 1         :                
+GND+                         : 22        :        :                   :         : 1         :                
+VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
+transducer_out[4]            : 24        : output : 3.3-V LVTTL       :         : 1         : Y              
+transducer_out[5]            : 25        : output : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT_WITH_BUS_HOLD : 26        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 27        :        :                   :         : 1         :                
+transducer_out[6]            : 28        : output : 3.3-V LVTTL       :         : 1         : Y              
+VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
+transducer_out[7]            : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
+transducer_out[8]            : 31        : output : 3.3-V LVTTL       :         : 1         : Y              
+transducer_out[9]            : 32        : output : 3.3-V LVTTL       :         : 1         : Y              
+GND                          : 33        : gnd    :                   :         :           :                
+GND_PLL1                     : 34        : gnd    :                   :         :           :                
+VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
+GND_PLL1                     : 36        : gnd    :                   :         :           :                
+VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
+GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
+GND                          : 39        : gnd    :                   :         :           :                
+transducer_out[10]           : 40        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[11]           : 41        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[12]           : 42        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[13]           : 43        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[14]           : 44        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[15]           : 45        : output : 3.3-V LVTTL       :         : 4         : Y              
+VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
+transducer_out[16]           : 47        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[17]           : 48        : output : 3.3-V LVTTL       :         : 4         : Y              
+GND                          : 49        : gnd    :                   :         :           :                
+VCCINT                       : 50        : power  :                   : 1.2V    :           :                
+transducer_out[18]           : 51        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[19]           : 52        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[20]           : 53        : output : 3.3-V LVTTL       :         : 4         : Y              
+VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
+transducer_out[21]           : 55        : output : 3.3-V LVTTL       :         : 4         : Y              
+GND                          : 56        : gnd    :                   :         :           :                
+transducer_out[22]           : 57        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[23]           : 58        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[24]           : 59        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[25]           : 60        : output : 3.3-V LVTTL       :         : 4         : Y              
+GND                          : 61        : gnd    :                   :         :           :                
+VCCINT                       : 62        : power  :                   : 1.2V    :           :                
+transducer_out[26]           : 63        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[27]           : 64        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[28]           : 65        : output : 3.3-V LVTTL       :         : 4         : Y              
+VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
+transducer_out[29]           : 67        : output : 3.3-V LVTTL       :         : 4         : Y              
+GND                          : 68        : gnd    :                   :         :           :                
+transducer_out[30]           : 69        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[31]           : 70        : output : 3.3-V LVTTL       :         : 4         : Y              
+transducer_out[32]           : 71        : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_BUS_HOLD : 72        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 73        :        :                   :         : 3         :                
+transducer_out[34]           : 74        : output : 3.3-V LVTTL       :         : 3         : Y              
+transducer_out[35]           : 75        : output : 3.3-V LVTTL       :         : 3         : Y              
+~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
+GND                          : 78        : gnd    :                   :         :           :                
+transducer_out[36]           : 79        : output : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT_WITH_BUS_HOLD : 80        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 81        :        :                   :         : 3         :                
+nSTATUS                      : 82        :        :                   :         : 3         :                
+CONF_DONE                    : 83        :        :                   :         : 3         :                
+MSEL1                        : 84        :        :                   :         : 3         :                
+MSEL0                        : 85        :        :                   :         : 3         :                
+transducer_out[37]           : 86        : output : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT_WITH_BUS_HOLD : 87        :        :                   :         : 3         :                
+GND+                         : 88        :        :                   :         : 3         :                
+GND+                         : 89        :        :                   :         : 3         :                
+GND+                         : 90        :        :                   :         : 3         :                
+GND+                         : 91        :        :                   :         : 3         :                
+transducer_out[39]           : 92        : output : 3.3-V LVTTL       :         : 3         : Y              
+transducer_out[40]           : 93        : output : 3.3-V LVTTL       :         : 3         : Y              
+transducer_out[41]           : 94        : output : 3.3-V LVTTL       :         : 3         : Y              
+VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
+transducer_out[42]           : 96        : output : 3.3-V LVTTL       :         : 3         : Y              
+transducer_out[43]           : 97        : output : 3.3-V LVTTL       :         : 3         : Y              
+GND                          : 98        : gnd    :                   :         :           :                
+transducer_out[44]           : 99        : output : 3.3-V LVTTL       :         : 3         : Y              
+transducer_out[45]           : 100       : output : 3.3-V LVTTL       :         : 3         : Y              
+transducer_out[46]           : 101       : output : 3.3-V LVTTL       :         : 3         : Y              
+VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 103       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 104       :        :                   :         : 3         :                
+GND                          : 105       : gnd    :                   :         :           :                
+GND_PLL2                     : 106       : gnd    :                   :         :           :                
+VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
+GND_PLL2                     : 108       : gnd    :                   :         :           :                
+VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
+GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
+GND                          : 111       : gnd    :                   :         :           :                
+transducer_out[49]           : 112       : output : 3.3-V LVTTL       :         : 2         : Y              
+SPI_cs                       : 113       : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI_mosi                     : 114       : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI_sclk                     : 115       : input  : 3.3-V LVTTL       :         : 2         : Y              
+VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
+GND                          : 117       : gnd    :                   :         :           :                
+transducer_out[33]           : 118       : output : 3.3-V LVTTL       :         : 2         : Y              
+transducer_out[38]           : 119       : output : 3.3-V LVTTL       :         : 2         : Y              
+transducer_out[47]           : 120       : output : 3.3-V LVTTL       :         : 2         : Y              
+transducer_out[48]           : 121       : output : 3.3-V LVTTL       :         : 2         : Y              
+SPI_data_done                : 122       : output : 3.3-V LVTTL       :         : 2         : Y              
+GND                          : 123       : gnd    :                   :         :           :                
+VCCINT                       : 124       : power  :                   : 1.2V    :           :                
+apply_shift_all              : 125       : output : 3.3-V LVTTL       :         : 2         : Y              
+rst                          : 126       : input  : 3.3-V LVTTL       :         : 2         : Y              
+VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
+GND                          : 128       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_BUS_HOLD : 129       :        :                   :         : 2         :                
+GND                          : 130       : gnd    :                   :         :           :                
+VCCINT                       : 131       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_BUS_HOLD : 132       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 133       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 134       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 135       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 136       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 137       :        :                   :         : 2         :                
+VCCIO2                       : 138       : power  :                   : 3.3V    : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 139       :        :                   :         : 2         :                
+GND                          : 140       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_BUS_HOLD : 141       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 142       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 143       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 144       :        :                   :         : 2         :                

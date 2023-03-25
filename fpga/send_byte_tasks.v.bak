@@ -1,0 +1,73 @@
+    task send_byte1;
+		begin
+		MOSI <= 1'b0; // MSB
+		#(SCK_DELAY/2) sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b1;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b1;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		end
+  endtask
+  
+  task send_byte2;
+		begin
+		MOSI <= 1'b0; // MSB
+		#(SCK_DELAY/2) sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b1;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b1;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		
+		#SCK_DELAY sck_in <= 1;
+		#SCK_DELAY sck_in <= 0;
+		MOSI <= 1'b0;
+		end
+  endtask

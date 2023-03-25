@@ -1,0 +1,9 @@
+module ultrasonic
+	#(parameter NUM_CHANNELS = 50)
+	(
+		input master_clock,
+		input RX_serial,
+	);
+	
+	
+end module

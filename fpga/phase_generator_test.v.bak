@@ -1,0 +1,14 @@
+`timescale 1ns/100ps
+
+module phase_generator_test(
+  output reg clk_tb,
+  output reg[6:0] phase_command_in,
+  
+  output reg apply_shift_command,
+  input wire phase_generator_out
+  );
+  
+  
+
+
+endmodule

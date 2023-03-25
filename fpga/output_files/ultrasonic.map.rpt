@@ -1,0 +1,995 @@
+Analysis & Synthesis report for ultrasonic
+Sat Jul 23 17:21:14 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |ultrasonic
+ 12. Parameter Settings for User Entity Instance: clock_divider:clock_divider_10MHz
+ 13. Parameter Settings for User Entity Instance: phase_generator:transducers[0]
+ 14. Parameter Settings for User Entity Instance: phase_generator:transducers[1]
+ 15. Parameter Settings for User Entity Instance: phase_generator:transducers[2]
+ 16. Parameter Settings for User Entity Instance: phase_generator:transducers[3]
+ 17. Parameter Settings for User Entity Instance: phase_generator:transducers[4]
+ 18. Parameter Settings for User Entity Instance: phase_generator:transducers[5]
+ 19. Parameter Settings for User Entity Instance: phase_generator:transducers[6]
+ 20. Parameter Settings for User Entity Instance: phase_generator:transducers[7]
+ 21. Parameter Settings for User Entity Instance: phase_generator:transducers[8]
+ 22. Parameter Settings for User Entity Instance: phase_generator:transducers[9]
+ 23. Parameter Settings for User Entity Instance: phase_generator:transducers[10]
+ 24. Parameter Settings for User Entity Instance: phase_generator:transducers[11]
+ 25. Parameter Settings for User Entity Instance: phase_generator:transducers[12]
+ 26. Parameter Settings for User Entity Instance: phase_generator:transducers[13]
+ 27. Parameter Settings for User Entity Instance: phase_generator:transducers[14]
+ 28. Parameter Settings for User Entity Instance: phase_generator:transducers[15]
+ 29. Parameter Settings for User Entity Instance: phase_generator:transducers[16]
+ 30. Parameter Settings for User Entity Instance: phase_generator:transducers[17]
+ 31. Parameter Settings for User Entity Instance: phase_generator:transducers[18]
+ 32. Parameter Settings for User Entity Instance: phase_generator:transducers[19]
+ 33. Parameter Settings for User Entity Instance: phase_generator:transducers[20]
+ 34. Parameter Settings for User Entity Instance: phase_generator:transducers[21]
+ 35. Parameter Settings for User Entity Instance: phase_generator:transducers[22]
+ 36. Parameter Settings for User Entity Instance: phase_generator:transducers[23]
+ 37. Parameter Settings for User Entity Instance: phase_generator:transducers[24]
+ 38. Parameter Settings for User Entity Instance: phase_generator:transducers[25]
+ 39. Parameter Settings for User Entity Instance: phase_generator:transducers[26]
+ 40. Parameter Settings for User Entity Instance: phase_generator:transducers[27]
+ 41. Parameter Settings for User Entity Instance: phase_generator:transducers[28]
+ 42. Parameter Settings for User Entity Instance: phase_generator:transducers[29]
+ 43. Parameter Settings for User Entity Instance: phase_generator:transducers[30]
+ 44. Parameter Settings for User Entity Instance: phase_generator:transducers[31]
+ 45. Parameter Settings for User Entity Instance: phase_generator:transducers[32]
+ 46. Parameter Settings for User Entity Instance: phase_generator:transducers[33]
+ 47. Parameter Settings for User Entity Instance: phase_generator:transducers[34]
+ 48. Parameter Settings for User Entity Instance: phase_generator:transducers[35]
+ 49. Parameter Settings for User Entity Instance: phase_generator:transducers[36]
+ 50. Parameter Settings for User Entity Instance: phase_generator:transducers[37]
+ 51. Parameter Settings for User Entity Instance: phase_generator:transducers[38]
+ 52. Parameter Settings for User Entity Instance: phase_generator:transducers[39]
+ 53. Parameter Settings for User Entity Instance: phase_generator:transducers[40]
+ 54. Parameter Settings for User Entity Instance: phase_generator:transducers[41]
+ 55. Parameter Settings for User Entity Instance: phase_generator:transducers[42]
+ 56. Parameter Settings for User Entity Instance: phase_generator:transducers[43]
+ 57. Parameter Settings for User Entity Instance: phase_generator:transducers[44]
+ 58. Parameter Settings for User Entity Instance: phase_generator:transducers[45]
+ 59. Parameter Settings for User Entity Instance: phase_generator:transducers[46]
+ 60. Parameter Settings for User Entity Instance: phase_generator:transducers[47]
+ 61. Parameter Settings for User Entity Instance: phase_generator:transducers[48]
+ 62. Parameter Settings for User Entity Instance: phase_generator:transducers[49]
+ 63. Port Connectivity Checks: "spi_slave:spi"
+ 64. Elapsed Time Per Partition
+ 65. Analysis & Synthesis Messages
+ 66. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Jul 23 17:21:14 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ultrasonic                                      ;
+; Top-level Entity Name              ; ultrasonic                                      ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 859                                             ;
+;     Total combinational functions  ; 490                                             ;
+;     Dedicated logic registers      ; 784                                             ;
+; Total registers                    ; 784                                             ;
+; Total pins                         ; 57                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5T144C8        ;                    ;
+; Top-level entity name                                                      ; ultrasonic         ; ultrasonic         ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
+; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; phase_generator.v                ; yes             ; User Verilog HDL File  ; C:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v ;         ;
+; clock_divider.v                  ; yes             ; User Verilog HDL File  ; C:/Users/roger/Desktop/projects/ultrasonic/fpga/clock_divider.v   ;         ;
+; spi_slave.v                      ; yes             ; User Verilog HDL File  ; C:/Users/roger/Desktop/projects/ultrasonic/fpga/spi_slave.v       ;         ;
+; ultrasonic.v                     ; yes             ; User Verilog HDL File  ; C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v      ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                ;
++---------------------------------------------+----------------------------------------------+
+; Resource                                    ; Usage                                        ;
++---------------------------------------------+----------------------------------------------+
+; Estimated Total logic elements              ; 859                                          ;
+;                                             ;                                              ;
+; Total combinational functions               ; 490                                          ;
+; Logic element usage by number of LUT inputs ;                                              ;
+;     -- 4 input functions                    ; 49                                           ;
+;     -- 3 input functions                    ; 25                                           ;
+;     -- <=2 input functions                  ; 416                                          ;
+;                                             ;                                              ;
+; Logic elements by mode                      ;                                              ;
+;     -- normal mode                          ; 185                                          ;
+;     -- arithmetic mode                      ; 305                                          ;
+;                                             ;                                              ;
+; Total registers                             ; 784                                          ;
+;     -- Dedicated logic registers            ; 784                                          ;
+;     -- I/O registers                        ; 0                                            ;
+;                                             ;                                              ;
+; I/O pins                                    ; 57                                           ;
+; Embedded Multiplier 9-bit elements          ; 0                                            ;
+; Maximum fan-out node                        ; clock_divider:clock_divider_10MHz|clock_slow ;
+; Maximum fan-out                             ; 423                                          ;
+; Total fan-out                               ; 3700                                         ;
+; Average fan-out                             ; 2.78                                         ;
++---------------------------------------------+----------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; |ultrasonic                            ; 490 (79)          ; 784 (358)    ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |ultrasonic                                   ; work         ;
+;    |clock_divider:clock_divider_10MHz| ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|clock_divider:clock_divider_10MHz ; work         ;
+;    |phase_generator:transducers[0]|    ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[0]    ; work         ;
+;    |phase_generator:transducers[10]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[10]   ; work         ;
+;    |phase_generator:transducers[11]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[11]   ; work         ;
+;    |phase_generator:transducers[12]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[12]   ; work         ;
+;    |phase_generator:transducers[13]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[13]   ; work         ;
+;    |phase_generator:transducers[14]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[14]   ; work         ;
+;    |phase_generator:transducers[15]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[15]   ; work         ;
+;    |phase_generator:transducers[16]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[16]   ; work         ;
+;    |phase_generator:transducers[17]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[17]   ; work         ;
+;    |phase_generator:transducers[18]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[18]   ; work         ;
+;    |phase_generator:transducers[19]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[19]   ; work         ;
+;    |phase_generator:transducers[1]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[1]    ; work         ;
+;    |phase_generator:transducers[20]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[20]   ; work         ;
+;    |phase_generator:transducers[21]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[21]   ; work         ;
+;    |phase_generator:transducers[22]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[22]   ; work         ;
+;    |phase_generator:transducers[23]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[23]   ; work         ;
+;    |phase_generator:transducers[24]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[24]   ; work         ;
+;    |phase_generator:transducers[25]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[25]   ; work         ;
+;    |phase_generator:transducers[26]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[26]   ; work         ;
+;    |phase_generator:transducers[27]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[27]   ; work         ;
+;    |phase_generator:transducers[28]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[28]   ; work         ;
+;    |phase_generator:transducers[29]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[29]   ; work         ;
+;    |phase_generator:transducers[2]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[2]    ; work         ;
+;    |phase_generator:transducers[30]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[30]   ; work         ;
+;    |phase_generator:transducers[31]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[31]   ; work         ;
+;    |phase_generator:transducers[32]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[32]   ; work         ;
+;    |phase_generator:transducers[33]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[33]   ; work         ;
+;    |phase_generator:transducers[34]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[34]   ; work         ;
+;    |phase_generator:transducers[35]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[35]   ; work         ;
+;    |phase_generator:transducers[36]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[36]   ; work         ;
+;    |phase_generator:transducers[37]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[37]   ; work         ;
+;    |phase_generator:transducers[38]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[38]   ; work         ;
+;    |phase_generator:transducers[39]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[39]   ; work         ;
+;    |phase_generator:transducers[3]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[3]    ; work         ;
+;    |phase_generator:transducers[40]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[40]   ; work         ;
+;    |phase_generator:transducers[41]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[41]   ; work         ;
+;    |phase_generator:transducers[42]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[42]   ; work         ;
+;    |phase_generator:transducers[43]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[43]   ; work         ;
+;    |phase_generator:transducers[44]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[44]   ; work         ;
+;    |phase_generator:transducers[45]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[45]   ; work         ;
+;    |phase_generator:transducers[46]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[46]   ; work         ;
+;    |phase_generator:transducers[47]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[47]   ; work         ;
+;    |phase_generator:transducers[48]|   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[48]   ; work         ;
+;    |phase_generator:transducers[49]|   ; 8 (8)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[49]   ; work         ;
+;    |phase_generator:transducers[4]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[4]    ; work         ;
+;    |phase_generator:transducers[5]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[5]    ; work         ;
+;    |phase_generator:transducers[6]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[6]    ; work         ;
+;    |phase_generator:transducers[7]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[7]    ; work         ;
+;    |phase_generator:transducers[8]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[8]    ; work         ;
+;    |phase_generator:transducers[9]|    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|phase_generator:transducers[9]    ; work         ;
+;    |spi_slave:spi|                     ; 6 (6)             ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ultrasonic|spi_slave:spi                     ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++------------------------------------------------+------------------------------------------------------------+
+; Register name                                  ; Reason for Removal                                         ;
++------------------------------------------------+------------------------------------------------------------+
+; phase_generator:transducers[0]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[1]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[2]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[3]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[4]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[5]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[6]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[7]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[8]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[9]|apply_shift_d1  ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[10]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[11]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[12]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[13]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[14]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[15]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[16]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[17]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[18]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[19]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[20]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[21]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[22]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[23]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[24]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[25]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[26]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[27]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[28]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[29]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[30]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[31]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[32]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[33]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[34]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[35]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[36]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[37]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[38]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[39]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[40]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[41]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[42]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[43]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[44]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[45]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[46]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[47]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; phase_generator:transducers[48]|apply_shift_d1 ; Merged with phase_generator:transducers[49]|apply_shift_d1 ;
+; clock_divider:clock_divider_10MHz|counter[3]   ; Stuck at GND due to stuck port data_in                     ;
+; Total Number of Removed Registers = 50         ;                                                            ;
++------------------------------------------------+------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 784   ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 350   ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 372   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ultrasonic|spi_slave:spi|bit_ct_q[0] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |ultrasonic|transducer_counter[5]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ultrasonic ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; NUM_CHANNELS   ; 50    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divider:clock_divider_10MHz ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; DIVISOR        ; 0101  ; Unsigned Binary                                       ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[0] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[1] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[2] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[3] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[4] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[5] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[6] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[7] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[8] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[9] ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[10] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[11] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[12] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[13] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[14] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[15] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[16] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[17] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[18] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[19] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[20] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[21] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[22] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[23] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[24] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[25] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[26] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[27] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[28] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[29] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[30] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[31] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[32] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[33] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[34] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[35] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[36] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[37] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[38] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[39] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[40] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[41] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[42] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[43] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[44] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[45] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[46] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[47] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[48] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: phase_generator:transducers[49] ;
++-------------------+-------+--------------------------------------------------+
+; Parameter Name    ; Value ; Type                                             ;
++-------------------+-------+--------------------------------------------------+
+; COUNTS_PER_PERIOD ; 128   ; Signed Integer                                   ;
++-------------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "spi_slave:spi"                                                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; dout[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; rst     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; miso    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jul 23 17:21:13 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ultrasonic -c ultrasonic
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider_test.v
+    Info (12023): Found entity 1: clock_divider_test
+Info (12021): Found 1 design units, including 1 entities, in source file uart.v
+    Info (12023): Found entity 1: uart_rx
+Info (12021): Found 1 design units, including 1 entities, in source file phase_generator.v
+    Info (12023): Found entity 1: phase_generator
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.v
+    Info (12023): Found entity 1: clock_divider
+Info (12021): Found 1 design units, including 1 entities, in source file uart_test.v
+    Info (12023): Found entity 1: uart_test
+Info (12021): Found 1 design units, including 1 entities, in source file phase_generator_test.v
+    Info (12023): Found entity 1: phase_generator_test
+Info (12021): Found 1 design units, including 1 entities, in source file ultrasonic_test.v
+    Info (12023): Found entity 1: ultrasonic_test
+Info (12021): Found 1 design units, including 1 entities, in source file spi_slave.v
+    Info (12023): Found entity 1: spi_slave
+Info (12021): Found 1 design units, including 1 entities, in source file ultrasonic.v
+    Info (12023): Found entity 1: ultrasonic
+Info (12021): Found 0 design units, including 0 entities, in source file send_byte_tasks.v
+Warning (10222): Verilog HDL Parameter Declaration warning at uart.v(16): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Info (12127): Elaborating entity "ultrasonic" for the top level hierarchy
+Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:spi"
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clock_divider_10MHz"
+Info (12128): Elaborating entity "phase_generator" for hierarchy "phase_generator:transducers[0]"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/roger/Desktop/projects/ultrasonic/fpga/output_files/ultrasonic.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 917 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 860 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4599 megabytes
+    Info: Processing ended: Sat Jul 23 17:21:14 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/roger/Desktop/projects/ultrasonic/fpga/output_files/ultrasonic.map.smsg.
+
+

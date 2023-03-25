@@ -1,0 +1,841 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ultrasonic_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga {C:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module phase_generator
+# 
+# Top level modules:
+# 	phase_generator
+# vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga {C:/Users/roger/Desktop/projects/ultrasonic/fpga/clock_divider.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga {C:/Users/roger/Desktop/projects/ultrasonic/fpga/spi_slave.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_slave
+# 
+# Top level modules:
+# 	spi_slave
+# vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga {C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic
+# 
+# Top level modules:
+# 	ultrasonic
+# 
+vlog -reportprogress 300 -work work C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim work.ultrasonic_test
+# vsim work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(83): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(83): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/sck_in
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlftwvs0h8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftwvs0h8
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim work.ultrasonic_test
+# vsim work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlftkf7hkc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftkf7hkc
+# 
+add wave -position end  sim:/ultrasonic_test/sck_in
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim -voptargs=+acc work.ultrasonic_test
+# vsim -voptargs=+acc work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/sck_in
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlftgwwwvz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftgwwwvz
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim work.ultrasonic_test
+# vsim work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/sck_in
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlftr7bmwn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftr7bmwn
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/ultrasonic_test/DUT/phase_shift_buffer
+run
+run
+run
+run
+run
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim -voptargs=+acc work.ultrasonic_test
+# vsim -voptargs=+acc work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/sck_in
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlftf30wif".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftf30wif
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+add wave -position end  sim:/ultrasonic_test/DUT/phase_shift_buffer
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/ultrasonic_test/DUT/apply_shift_all
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+run
+run
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[0]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[1]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[2]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[3]
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+run
+run
+add wave -position 55  sim:/ultrasonic_test/transducer_out_test[49]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[48]
+add wave -position 58  sim:/ultrasonic_test/transducer_out_test[47]
+run
+add wave -position end  sim:/ultrasonic_test/DUT/transducers[49]/apply_shift
+add wave -position end  sim:/ultrasonic_test/DUT/transducers[49]/apply_shift_d1
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+run
+run
+add wave -position end  sim:/ultrasonic_test/DUT/transducers[0]/clock_slow
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+run
+run
+run
+run
+quit -sim
+vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic
+# 
+# Top level modules:
+# 	ultrasonic
+vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/phase_generator.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module phase_generator
+# 
+# Top level modules:
+# 	phase_generator
+vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic
+# 
+# Top level modules:
+# 	ultrasonic
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim work.ultrasonic_test
+# vsim work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/DUT/apply_shift_all
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlftt45ttw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftt45ttw
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+add wave -position end  sim:/ultrasonic_test/sck_in
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[0]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[1]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[2]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[3]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[9]
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+quit -sim
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim work.ultrasonic_test
+# vsim work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(31): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(34): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/DUT/apply_shift_all
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlft7ewr42".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft7ewr42
+# 
+add wave -position end  sim:/ultrasonic_test/MOSI
+add wave -position end  sim:/ultrasonic_test/sck_in
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[0]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[1]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[2]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[3]
+add wave -position end  sim:/ultrasonic_test/transducer_out_test[4]
+run
+run
+run
+run
+quit -sim
+vlog -sv -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic
+# 
+# Top level modules:
+# 	ultrasonic
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ultrasonic_test
+# 
+# Top level modules:
+# 	ultrasonic_test
+vsim work.ultrasonic_test
+# vsim work.ultrasonic_test 
+# Loading work.ultrasonic_test
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(34): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(34): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(36): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(36): [TFMPC] - Missing connection for port 'miso'.
+# 
+add wave -position end  sim:/ultrasonic_test/rst_in
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 24040
+# 
+#           Attempting to use alternate WLF file "./wlft1d4f9j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft1d4f9j
+# 
+add wave -position end  sim:/ultrasonic_test/DUT/transducer_counter
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/ultrasonic_test/sck_in
+run
+run
+run
+run
+run
+restart -f
+# Loading sv_std.std
+# Loading work.ultrasonic
+# Loading work.spi_slave
+# Loading work.clock_divider
+# Loading work.phase_generator
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(34): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /ultrasonic_test/DUT
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic_test.v(34): [TFMPC] - Missing connection for port 'SPI_data_done'.
+# 
+# ** Warning: (vsim-3017) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(36): [TFMPC] - Too few port connections. Expected 8, found 6.
+# 
+#         Region: /ultrasonic_test/DUT/spi
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(36): [TFMPC] - Missing connection for port 'rst'.
+# 
+# ** Warning: (vsim-3722) C:/Users/roger/Desktop/projects/ultrasonic/fpga/ultrasonic.v(36): [TFMPC] - Missing connection for port 'miso'.
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

@@ -1,0 +1,89 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do spi_test_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test {C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_test
+# 
+# Top level modules:
+# 	spi_test
+# 
+vlog -vlog01compat -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_test
+# 
+# Top level modules:
+# 	spi_test
+vlog -reportprogress 300 -work work C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_test_TB
+# 
+# Top level modules:
+# 	spi_test_TB
+vsim work.spi_test_TB
+# vsim work.spi_test_TB 
+# Loading work.spi_test_TB
+# Loading work.spi_test
+add wave -position end  sim:/spi_test_TB/transferred_byte
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 20072
+# 
+#           Attempting to use alternate WLF file "./wlfthq2y73".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfthq2y73
+# 
+add wave -position end  sim:/spi_test_TB/transfer_done
+add wave -position end  sim:/spi_test_TB/sck_in
+run
+run
+add wave -position end  sim:/spi_test_TB/ss_in
+restart -f
+run
+run
+run
+run
+run
+quit -sim
+vlog -vlog01compat -work work +incdir+C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_test
+# 
+# Top level modules:
+# 	spi_test
+vlog -work work -O0 C:/Users/roger/Desktop/projects/ultrasonic/fpga_spi_test/spi_test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_test_TB
+# 
+# Top level modules:
+# 	spi_test_TB
+vsim work.spi_test_TB
+# vsim work.spi_test_TB 
+# Loading work.spi_test_TB
+# Loading work.spi_test
+add wave -position end  sim:/spi_test_TB/transferred_byte
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: roger  Hostname: ROGERPC  ProcessID: 20072
+# 
+#           Attempting to use alternate WLF file "./wlftcwm9cf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftcwm9cf
+# 
+add wave -position end  sim:/spi_test_TB/transfer_done
+add wave -position end  sim:/spi_test_TB/ss_in
+add wave -position end  sim:/spi_test_TB/sck_in
+run
+run
+run

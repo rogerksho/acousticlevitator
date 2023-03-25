@@ -1,0 +1,1229 @@
+|ultrasonic
+master_clock => master_clock.IN1
+SPI_sclk => SPI_sclk.IN1
+SPI_mosi => SPI_mosi.IN1
+SPI_cs => SPI_cs.IN1
+rst => transducer_counter.OUTPUTSELECT
+rst => transducer_counter.OUTPUTSELECT
+rst => transducer_counter.OUTPUTSELECT
+rst => transducer_counter.OUTPUTSELECT
+rst => transducer_counter.OUTPUTSELECT
+rst => transducer_counter.OUTPUTSELECT
+rst => apply_shift_all.OUTPUTSELECT
+SPI_data_done <= spi_slave:spi.done
+apply_shift_all <= apply_shift_all~reg0.DB_MAX_OUTPUT_PORT_TYPE
+transducer_out[0] <= phase_generator:transducers[0].clock_out
+transducer_out[1] <= phase_generator:transducers[1].clock_out
+transducer_out[2] <= phase_generator:transducers[2].clock_out
+transducer_out[3] <= phase_generator:transducers[3].clock_out
+transducer_out[4] <= phase_generator:transducers[4].clock_out
+transducer_out[5] <= phase_generator:transducers[5].clock_out
+transducer_out[6] <= phase_generator:transducers[6].clock_out
+transducer_out[7] <= phase_generator:transducers[7].clock_out
+transducer_out[8] <= phase_generator:transducers[8].clock_out
+transducer_out[9] <= phase_generator:transducers[9].clock_out
+transducer_out[10] <= phase_generator:transducers[10].clock_out
+transducer_out[11] <= phase_generator:transducers[11].clock_out
+transducer_out[12] <= phase_generator:transducers[12].clock_out
+transducer_out[13] <= phase_generator:transducers[13].clock_out
+transducer_out[14] <= phase_generator:transducers[14].clock_out
+transducer_out[15] <= phase_generator:transducers[15].clock_out
+transducer_out[16] <= phase_generator:transducers[16].clock_out
+transducer_out[17] <= phase_generator:transducers[17].clock_out
+transducer_out[18] <= phase_generator:transducers[18].clock_out
+transducer_out[19] <= phase_generator:transducers[19].clock_out
+transducer_out[20] <= phase_generator:transducers[20].clock_out
+transducer_out[21] <= phase_generator:transducers[21].clock_out
+transducer_out[22] <= phase_generator:transducers[22].clock_out
+transducer_out[23] <= phase_generator:transducers[23].clock_out
+transducer_out[24] <= phase_generator:transducers[24].clock_out
+transducer_out[25] <= phase_generator:transducers[25].clock_out
+transducer_out[26] <= phase_generator:transducers[26].clock_out
+transducer_out[27] <= phase_generator:transducers[27].clock_out
+transducer_out[28] <= phase_generator:transducers[28].clock_out
+transducer_out[29] <= phase_generator:transducers[29].clock_out
+transducer_out[30] <= phase_generator:transducers[30].clock_out
+transducer_out[31] <= phase_generator:transducers[31].clock_out
+transducer_out[32] <= phase_generator:transducers[32].clock_out
+transducer_out[33] <= phase_generator:transducers[33].clock_out
+transducer_out[34] <= phase_generator:transducers[34].clock_out
+transducer_out[35] <= phase_generator:transducers[35].clock_out
+transducer_out[36] <= phase_generator:transducers[36].clock_out
+transducer_out[37] <= phase_generator:transducers[37].clock_out
+transducer_out[38] <= phase_generator:transducers[38].clock_out
+transducer_out[39] <= phase_generator:transducers[39].clock_out
+transducer_out[40] <= phase_generator:transducers[40].clock_out
+transducer_out[41] <= phase_generator:transducers[41].clock_out
+transducer_out[42] <= phase_generator:transducers[42].clock_out
+transducer_out[43] <= phase_generator:transducers[43].clock_out
+transducer_out[44] <= phase_generator:transducers[44].clock_out
+transducer_out[45] <= phase_generator:transducers[45].clock_out
+transducer_out[46] <= phase_generator:transducers[46].clock_out
+transducer_out[47] <= phase_generator:transducers[47].clock_out
+transducer_out[48] <= phase_generator:transducers[48].clock_out
+transducer_out[49] <= phase_generator:transducers[49].clock_out
+
+
+|ultrasonic|spi_slave:spi
+clk => sck_old_q.CLK
+clk => data_q[0].CLK
+clk => data_q[1].CLK
+clk => data_q[2].CLK
+clk => data_q[3].CLK
+clk => data_q[4].CLK
+clk => data_q[5].CLK
+clk => data_q[6].CLK
+clk => data_q[7].CLK
+clk => ss_q.CLK
+clk => mosi_q.CLK
+clk => sck_q.CLK
+clk => miso_q.CLK
+clk => dout_q[0].CLK
+clk => dout_q[1].CLK
+clk => dout_q[2].CLK
+clk => dout_q[3].CLK
+clk => dout_q[4].CLK
+clk => dout_q[5].CLK
+clk => dout_q[6].CLK
+clk => dout_q[7].CLK
+clk => bit_ct_q[0].CLK
+clk => bit_ct_q[1].CLK
+clk => bit_ct_q[2].CLK
+clk => done_q.CLK
+rst => done_q.OUTPUTSELECT
+rst => bit_ct_q.OUTPUTSELECT
+rst => bit_ct_q.OUTPUTSELECT
+rst => bit_ct_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => dout_q.OUTPUTSELECT
+rst => miso_q.OUTPUTSELECT
+ss => ss_q.DATAIN
+mosi => mosi_q.DATAIN
+miso <= miso_q.DB_MAX_OUTPUT_PORT_TYPE
+sck => sck_q.DATAIN
+done <= done_q.DB_MAX_OUTPUT_PORT_TYPE
+dout[0] <= dout_q[0].DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout_q[1].DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout_q[2].DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout_q[3].DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout_q[4].DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout_q[5].DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout_q[6].DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout_q[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ultrasonic|clock_divider:clock_divider_10MHz
+clock_in => clock_slow~reg0.CLK
+clock_in => counter[0].CLK
+clock_in => counter[1].CLK
+clock_in => counter[2].CLK
+clock_in => counter[3].CLK
+clock_slow <= clock_slow~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ultrasonic|phase_generator:transducers[0]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[1]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[2]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[3]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[4]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[5]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[6]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[7]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[8]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[9]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[10]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[11]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[12]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[13]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[14]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[15]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[16]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[17]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[18]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[19]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[20]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[21]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[22]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[23]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[24]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[25]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[26]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[27]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[28]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[29]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[30]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[31]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[32]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[33]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[34]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[35]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[36]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[37]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[38]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[39]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[40]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[41]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[42]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[43]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[44]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[45]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[46]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[47]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[48]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+
+|ultrasonic|phase_generator:transducers[49]
+clock_slow => clock_out~reg0.CLK
+clock_slow => apply_shift_d1.CLK
+clock_slow => counter[0].CLK
+clock_slow => counter[1].CLK
+clock_slow => counter[2].CLK
+clock_slow => counter[3].CLK
+clock_slow => counter[4].CLK
+clock_slow => counter[5].CLK
+clock_slow => counter[6].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+phase_shift[0] => counter.DATAB
+phase_shift[1] => counter.DATAB
+phase_shift[2] => counter.DATAB
+phase_shift[3] => counter.DATAB
+phase_shift[4] => counter.DATAB
+phase_shift[5] => counter.DATAB
+phase_shift[6] => counter.DATAB
+apply_shift => always0.IN1
+apply_shift => apply_shift_d1.DATAIN
+
+

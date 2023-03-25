@@ -1,0 +1,8 @@
+module phase_generator
+	#(parameter)
+	(
+		input slow_clock;
+		output reg clock_out;
+	)
+
+endmodule
